@@ -1,0 +1,66 @@
+Task 2 Request
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.3 Python/3.12.7
+Date: Wed, 29 Jan 2025 18:30:16 GMT
+Content-Type: application/json
+Content-Length: 370
+Connection: close
+
+{
+  "tasks": [
+    {
+      "description": "Milk, Cheese, Pizza, Fruit, Tylenol",
+      "done": false,
+      "title": "Buy groceries",
+      "uri": "http://127.0.0.1:5000/todo/1"
+    },
+    {
+      "description": "Need to find a good Python tutorial on the web",
+      "done": false,
+      "title": "Learn Python",
+      "uri": "http://127.0.0.1:5000/todo/2"
+    }
+  ]
+}
+
+
+Task 3 Request (I didn't include Content-Length but the request went through anyways)
+
+POST http://127.0.0.1:5000/todo HTTP/1.1
+Authorization: Basic bWFjYWxlc3RlcjpzY290cw==
+Content-Type: application/json
+
+{ "title": "Go to Walgreens", "description": "I need drugs" }
+
+Task 4 Request
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.3 Python/3.12.7
+Date: Wed, 29 Jan 2025 18:35:47 GMT
+Content-Type: application/json
+Content-Length: 168
+Connection: close
+
+{
+  "task": {
+    "description": "Milk, Cheese, Pizza, Fruit, Tylenol",
+    "done": true,
+    "title": "Buy groceries",
+    "uri": "http://127.0.0.1:5000/todo/1"
+  }
+}
+
+
+Task 5 Request
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.3 Python/3.12.7
+Date: Wed, 29 Jan 2025 18:36:43 GMT
+Content-Type: application/json
+Content-Length: 21
+Connection: close
+
+{
+  "result": true
+}
